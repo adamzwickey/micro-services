@@ -1,0 +1,13 @@
+---
+applications:
+- name: caps
+  memory: 1G
+  instances: 1
+  host: caps
+  path: target/microservice-caps-1.0.0.BUILD-SNAPSHOT.jar
+  services:
+    -  configserver
+    -  eureka
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: south.fe.pivotal.io

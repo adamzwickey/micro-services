@@ -1,0 +1,10 @@
+server:
+  port: 8181
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.netflix: 'DEBUG'
+    com.netflix.http4: 'ERROR'
+    c.n.h: 'DEBUG'
