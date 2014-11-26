@@ -1,0 +1,10 @@
+---
+applications:
+- name: configserver
+  memory: 512M
+  instances: 1
+  host: configserver
+  path: target/configserver-1.0.0.BUILD-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud,native
+    APPLICATION_DOMAIN: south.fe.pivotal.io

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" filepath="$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-caps/microservice-caps.iml" filepath="$PROJECT_DIR$/microservice-caps/microservice-caps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-reverse/microservice-reverse.iml" filepath="$PROJECT_DIR$/microservice-reverse/microservice-reverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-ui/microservice-ui.iml" filepath="$PROJECT_DIR$/microservice-ui/microservice-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rest-microservices-demo.iml" filepath="$PROJECT_DIR$/rest-microservices-demo.iml" />
+    </modules>
+  </component>
+</project>

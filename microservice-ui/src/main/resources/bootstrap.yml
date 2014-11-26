@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: microservice-ui
+  cloud:
+    config:
+      uri: ${vcap.services.configserver.credentials.uri:http://user:password@localhost:8888}
+encrypt:
+  failOnError: false
+     

@@ -1,0 +1,13 @@
+---
+applications:
+- name: microservice-ui
+  memory: 512M
+  instances: 1
+  host: microservice-ui
+  path: target/microservice-ui-1.0.0.BUILD-SNAPSHOT.jar
+  services:
+    -  configserver
+    -  eureka
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: south.fe.pivotal.io

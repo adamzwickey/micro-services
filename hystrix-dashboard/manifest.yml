@@ -1,0 +1,13 @@
+---
+applications:
+- name: hystrix-dashboard
+  memory: 512M
+  instances: 1
+  host: hystrix-dashboard
+  path: target/hystrix-dashboard-1.0.0.BUILD-SNAPSHOT.jar
+  services:
+    -  configserver
+    -  eureka
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: south.fe.pivotal.io

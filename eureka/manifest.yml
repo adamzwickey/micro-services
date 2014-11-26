@@ -1,0 +1,12 @@
+---
+applications:
+- name: eureka
+  memory: 512M
+  instances: 1
+  host: eureka
+  path: target/eureka-1.0.0.BUILD-SNAPSHOT.jar
+  services:
+  -  configserver
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: south.fe.pivotal.io

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: microservice-ui
+
+server:
+  port: 9900
+
+zuul:
+  proxy:
+    enabled: true
+    route:
+      caps: /caps
+      reverse: /reverse
+
+logging:
+  level:
+    org.springframework.cloud.netflix.zuul: 'TRACE'
+    com.netflix.zuul: 'DEBUG'

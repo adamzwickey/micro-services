@@ -1,0 +1,13 @@
+---
+applications:
+- name: reverse
+  memory: 512M
+  instances: 1
+  host: reverse
+  path: target/microservice-reverse-1.0.0.BUILD-SNAPSHOT.jar
+  services:
+    -  configserver
+    -  eureka
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: south.fe.pivotal.io

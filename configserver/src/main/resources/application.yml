@@ -1,0 +1,33 @@
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'INFO'
+
+security:
+  user:
+    password: password
+    
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /admin/info
+    healthCheckUrlPath: /admin/health
+    metadataMap:
+      password: ${security.user.password}
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    hostname: ${PREFIX:}${spring.application.name}.${application.domain:south.fe.pivotal.io}
+    nonSecurePort: 80
+    virtualHostName: ${spring.application.name}
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka.credentials.uri:http://eureka.south.fe.pivotal.io/eureka/}
+    region: default
+    registryFetchIntervalSeconds: 5
+    preferSameZone: false
+    availabilityZones:
+      default: ${vcap.services.eureka.credentials.uri:http://eureka.south.fe.pivotal.io/eureka/}
+
+hystrix:
+  stream:
+    maxConcurrentConnections: 50
